@@ -1,0 +1,32 @@
+<div class="result-container">
+
+  <h2>回答確認</h2>
+
+  <p class="description">
+    以下の内容で回答します。
+  </p>
+
+  <div class="answer-list">
+
+    <div
+      class="answer-item"
+      *ngFor="let answer of answers"
+    >
+
+      <div class="question">
+        {{ getQuestionText(answer.questionId) }}
+      </div>
+
+      <div class="answer">
+        回答：{{ getAnswerLabel(answer) }}
+      </div>
+
+    </div>
+
+  </div>
+
+<button type="button" (click)="save()">
+  保存する
+</button>
+
+</div>

@@ -1,0 +1,46 @@
+<div *ngIf="!showResult">
+
+  <div class="question-container">
+
+    <div class="progress">
+      {{ currentIndex + 1 }} / {{ questions.length }}
+    </div>
+
+    <div class="question-card">
+
+      <h2>
+        {{ currentQuestion.text }}
+      </h2>
+
+      <div
+        class="choices"
+        *ngIf="currentQuestion.type === 'single-choice'"
+      >
+
+        <button
+          *ngFor="let choice of currentQuestion.choices"
+          type="button"
+          [class.selected]="selectedAnswer === choice.value"
+          (click)="selectAnswer(choice.value)"
+        >
+          {{ choice.label }}
+        </button>
+
+      </div>
+
+      <button
+        class="next-button"
+        type="button"
+        [disabled]="selectedAnswer === null"
+        (click)="nextQuestion()"
+      >
+        {{ isLastQuestion ? '回答を確認する' : '次の質問' }}
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<app-result *ngIf="showResult"></app-result>
