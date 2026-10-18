@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "mental-api"
+		},
+		{
+			"path": "mental-web"
+		}
+	],
+	"settings": {
+		"maven.view": "flat",
+		"java.project.explorer.showNonJavaResources": true,
+		"java.dependency.syncWithFolderExplorer": false,
+		"java.dependency.packagePresentation": "hierarchical",
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}
